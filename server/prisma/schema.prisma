@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("MYSQL_DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  username String
+  email    String @unique
+  password String
+
+  services Service[]
+  // refresh_token RefreshToken?
+  @@map("users")
+}
+
+model Service {
+  id          String @id @default(uuid())
+  client      String
+  car         String
+  date        String
+  value       Int
+  descservice String
+
+  user User @relation(fields: [user_id], references: [id])
+
+  user_id String
+  @@map("services")
+}
+
+// model RefreshToken {
+//   id        String @id @default(uuid())
+//   expiresIn Int
+
+//   user    User   @relation(fields: [user_id], references: [id])
+//   user_id String @unique
+
+//   @@map("refresh_token")
+// }
