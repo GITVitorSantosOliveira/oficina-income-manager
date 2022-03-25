@@ -1,9 +1,9 @@
 import Routers from "./routes";
-import styles from "./App.module.scss";
 import { AuthProvider } from "./Contexts/AuthContext";
+import './styles/global.css'
 function App() {
   return (
-    <main className={styles.contentWrapper}>
+    <main >
       <AuthProvider>
       <Routers/>
       </AuthProvider>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
-
+import {Navigate, useNavigate} from 'react-router-dom'
+import LoginPage from "../../pages/LoginPage";
 
 export default function useAuth(){
   const [authenticated,setAuthenticated] = useState(false);
@@ -13,6 +13,8 @@ export default function useAuth(){
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       setAuthenticated(true);
     }
+
+    return (<Navigate to='/login'/>)
   }, [])
 
   async function handleLogin(user,pass){
@@ -26,7 +28,6 @@ export default function useAuth(){
         const token = localStorage.getItem('oficina-income-manager')
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         setAuthenticated(true)
-        // navigate('/services')
       })
 
       return {userData}

@@ -1,6 +1,6 @@
 import {api} from '../../../../services/api'
 import { useState } from 'react';
-import { Button, Input, InputGroup, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Button, Input, InputGroup, Modal, ModalBody, ModalFooter } from 'reactstrap';
 import styles from './customModal.module.scss'
 import {toast} from 'react-toastify'
 
