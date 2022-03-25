@@ -1,0 +1,136 @@
+.contentWrapper {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;
+  position: relative;
+}
+
+.wrapper {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 56px;
+  padding-top: 70px;
+  font-weight: bold;
+}
+
+.description {
+  color: #6d6b6b;
+  font-size: 18px;
+}
+
+//card
+.card {
+  background: #59e742;
+  border-radius: 25px;
+  margin-top: 7rem;
+  width: 470px;
+  width: 470px;
+}
+.cardBody {
+  margin-left: 2rem;
+}
+
+.cardTitle {
+  background: #59e742;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.inputGroup {
+  width: 93%;
+  // height: 30px;
+  // background: #ffffff;
+  // border-radius: 25px;
+  display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.buttonSignUp {
+  border: none;
+  outline: none;
+  width: 55%;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00feef;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 1rem;
+}
+
+.buttonSignIn:hover {
+  cursor: pointer;
+}
+
+.inputGroupButton {
+  background: #59e742;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//form
+.formWrapper {
+  background: #59e742;
+}
+
+//footer
+.cardFooter {
+  width: 85%;
+  background: #59e742;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-top: 1rem;
+
+  p {
+    background: #59e742;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  a {
+    border: none;
+    text-decoration: none;
+    background: #00feef;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    width: 70px;
+    height: 44px;
+  }
+}

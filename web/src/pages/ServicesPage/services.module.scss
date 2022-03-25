@@ -1,0 +1,156 @@
+.navbarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 4rem;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.navItem {
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+//header
+.headerServices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  h3 {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerServices {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    h3 {
+      margin-left: 20px;
+    }
+  }
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 300px;
+  height: 40px;
+  position: relative;
+}
+
+.buttonDropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+
+  background: #25bb00;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.valueField {
+  width: 250px;
+  height: 40px;
+  border-radius: 25px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueText {
+  background: #fff;
+  color: #000000;
+  font-size: 22px;
+  margin-left: 40px;
+}
+
+//dropdown toggle
+.dropdownToggle {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+}
+
+.dropdownToggle:hover {
+  cursor: pointer;
+}
+//dropdown
+
+.dropdownMenu {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  margin-left: 13rem;
+  margin-top: 8.5rem;
+}
+
+.containerMonths {
+  width: 300px;
+  color: #000000;
+}
+
+.wrapperMonths {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.month:hover {
+  color: #25bb00;
+  cursor: pointer;
+}
+
+//table
+.containerTable {
+  width: 98%;
+  height: 430px;
+  background: #fff;
+  margin: 2rem 0rem 0 1rem;
+}
+
+//initial table
+.initContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputSearch {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  background: #c6c1c1;
+  padding-left: 2rem;
+  font-size: 20px;
+}
+
+.inputSearchContainer {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.buttonModalContainer {
+  margin-top: 1rem;
+  margin-right: 2rem;
+}

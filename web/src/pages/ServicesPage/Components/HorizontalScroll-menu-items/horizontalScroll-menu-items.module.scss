@@ -1,0 +1,40 @@
+.ContainerMenuItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ContainerItems {
+  h3 {
+    margin-left: 2rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .ContainerMenuItems {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  .ContainerItems {
+    flex: 0 0 auto;
+  }
+}
+
+.valueText {
+  width: 150px;
+  height: 40px;
+  background: white;
+  color: black;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
