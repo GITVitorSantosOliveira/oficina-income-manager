@@ -11,7 +11,7 @@ function Home(){
       Oficina Income Manager consiste em um programa para fazer o gerenciamento de renda
       com base na relação entre ganho do serviço e gastos mensais.
       </p>
-      <a href="/login" className={styles.buttonHome}>COMEÇAR</a>
+      <a href="/services" className={styles.buttonHome}>COMEÇAR</a>
       </div>
       <div >
       <img src={imageHome} className={styles.image} alt='Imagem lado direito home'>

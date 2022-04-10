@@ -3,19 +3,21 @@ import {Form,InputGroup, Input, InputGroupText, Card, CardBody, CardTitle, Butto
 import {Key, User} from 'react-feather'
 import { useContext, useState } from 'react';
 import Logo from '../../components/Logo';
-import { AuthContext } from '../../Contexts/AuthContext';
+import AuthContext from '../../Contexts/AuthContext';
+import PrivateRoute from '../../Contexts/PrivateRoute';
 
 function LoginPage(){
   const [username,setUsername] = useState()
   const [current_passwod,setCurrent_Password] = useState()
-  const {handleLogin} = useContext(AuthContext);
+  const {authenticated,handleLogin} = useContext(AuthContext)
 
   async function handleSubmit(e){
     e.preventDefault();
     handleLogin(username,current_passwod)
-    
   }
+
   return(
+    <>
     <div className={styles.contentWrapper}>
     <div className={styles.wrapper}>
       <Logo/>
@@ -61,6 +63,7 @@ function LoginPage(){
         </CardFooter>
      </Card>
     </div>
+    </>
   )
 }
 

@@ -14,7 +14,7 @@ function ServicesPage(){
     
       async function getAllServices(){
         try {
-          api.get('/getallservices',{
+          await api.get('/getallservices',{
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('oficina-income-manager')}`
             }
