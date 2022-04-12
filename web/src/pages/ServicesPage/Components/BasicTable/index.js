@@ -5,10 +5,10 @@ import styles from './basicTable.module.scss'
 import ButtonDescService from "../ButtonDescService"
 function BasicTable({dataTable}){
   const columns = useMemo(()=> COLUMNS,[])
-    const tableInstace =  useTable({columns,data: dataTable})
+  const tableInstace =  useTable({columns,data: dataTable})
   
-    const {getTableBodyProps,getTableProps,headerGroups,prepareRow,rows} = tableInstace
- 
+  const {getTableBodyProps,getTableProps,headerGroups,prepareRow,rows} = tableInstace
+
  return (
    <>
    <table {...getTableProps()} className={styles.basicTable}>

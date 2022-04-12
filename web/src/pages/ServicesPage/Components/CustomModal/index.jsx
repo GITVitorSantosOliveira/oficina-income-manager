@@ -2,7 +2,6 @@ import {api} from '../../../../services/api'
 import { useState } from 'react';
 import { Button, Input, InputGroup, Modal, ModalBody, ModalFooter } from 'reactstrap';
 import styles from './customModal.module.scss'
-import {toast} from 'react-toastify'
 
 function CustomModal(){
   const [modalOpen,setModalOpen] = useState(false)
@@ -23,9 +22,8 @@ function CustomModal(){
     },{
       client,car:clientCar,date:dateService,value:valueService,descservice:descService
     })
-    .catch(err => toast('Erro ao criar o serviço',{position:"bottom-left",autoClose: 2000}))
+    .catch(err =>{return err.message})
     .then((res)=>{
-      toast('Sucesso ao criar o serviço',{position:"bottom-left",autoClose: 2000})
       console.log(res)
     })
   }

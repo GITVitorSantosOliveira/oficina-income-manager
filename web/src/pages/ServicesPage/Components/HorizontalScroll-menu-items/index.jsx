@@ -1,14 +1,14 @@
 import { ButtonDropdown, Col, InputGroup, InputGroupText, Row } from "reactstrap";
 import CustomButtonMonths from "../CustomButtonMonths";
 import styles from "./horizontalScroll-menu-items.module.scss";
-function HorizontalScrollMenuItems(){
+function HorizontalScrollMenuItems({data}){
   return(
     <Row className={styles.ContainerMenuItems}>
         <Col  className={styles.ContainerItems}>
             <h3>Número de Serviços </h3>
             <div>
               <CustomButtonMonths/>
-              <span className={styles.valueText}>20</span>
+              <span className={styles.valueText}>{data.QtServices}</span>
             </div>
         </Col>
 
@@ -16,7 +16,7 @@ function HorizontalScrollMenuItems(){
             <h3>Dinheiro Ganho  </h3>
             <div >
               <CustomButtonMonths/>
-              <span className={styles.valueText}>R$ 1000,00</span>
+              <span className={styles.valueText}>{data.earnedMoney[0]}</span>
             </div>
         </Col>
 

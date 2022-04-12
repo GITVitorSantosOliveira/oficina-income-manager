@@ -4,12 +4,11 @@ import {Key, User} from 'react-feather'
 import { useContext, useState } from 'react';
 import Logo from '../../components/Logo';
 import AuthContext from '../../Contexts/AuthContext';
-import PrivateRoute from '../../Contexts/PrivateRoute';
-
+import {NotificationContainer} from 'react-notifications';
 function LoginPage(){
   const [username,setUsername] = useState()
   const [current_passwod,setCurrent_Password] = useState()
-  const {authenticated,handleLogin} = useContext(AuthContext)
+  const {handleLogin} = useContext(AuthContext)
 
   async function handleSubmit(e){
     e.preventDefault();
@@ -18,6 +17,8 @@ function LoginPage(){
 
   return(
     <>
+    <NotificationContainer/>
+
     <div className={styles.contentWrapper}>
     <div className={styles.wrapper}>
       <Logo/>
@@ -62,6 +63,7 @@ function LoginPage(){
         <a href='/register' className={styles.buttonAskRegister}>SignUp</a>
         </CardFooter>
      </Card>
+     
     </div>
     </>
   )

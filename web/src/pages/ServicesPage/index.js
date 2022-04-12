@@ -6,10 +6,24 @@ import CustomModal from './Components/CustomModal';
 import Logo from '../../components/Logo';
 import HorizontalScrollMenuItems from './Components/HorizontalScroll-menu-items';
 import { api } from '../../services/api';
+import { X } from 'react-feather';
 
 function ServicesPage(){
   const [dataTable, setDataTable] = useState([])
-  
+  const [dataHorizontalScrollMenu,setDataHorizontalScrollMenu] = useState({})
+
+  function scrollMenuData(){
+    let data = {
+      QtServices : dataTable.length,
+      earnedMoney: dataTable.map((x)=>{
+        if(x.value){
+          return x.value+=(x.value-x.value);
+        }
+      })
+    }
+    setDataHorizontalScrollMenu(data)
+  }
+
   useEffect(() =>{
     
       async function getAllServices(){
@@ -36,7 +50,7 @@ function ServicesPage(){
         }
       }
       getAllServices();
-    
+      scrollMenuData();
   },[])
   
   return (
@@ -85,7 +99,7 @@ function ServicesPage(){
         </Col> */}
 
       </Row>
-      <HorizontalScrollMenuItems/>
+      <HorizontalScrollMenuItems data={dataHorizontalScrollMenu}/>
         <Container>
         <Row className={styles.containerTable}>
           <Row className={styles.initContent}>

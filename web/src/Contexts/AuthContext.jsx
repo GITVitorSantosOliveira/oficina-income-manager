@@ -1,6 +1,8 @@
-import React, {createContext, useContext, useEffect, useState} from 'react'
+import React, {createContext, useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
+import 'react-notifications/lib/notifications.css';
+import { NotificationManager} from 'react-notifications';
 
 const AuthContext = createContext();
 
@@ -29,13 +31,16 @@ export const AuthProvider=({children})=>{
         api.defaults.headers.common['Authorization'] = `Bearer ${res?.data.token}`;
         setAuthenticated(true);
 
+        NotificationManager.success('Você foi logado com sucesso!',"",2000);
+
+
         setTimeout(()=>{
           navigate('/services')
-        },2000)
+        },3000)
       })
   
     } catch (error) {
-      return {message: error.message}
+      return NotificationManager.error('erro ao tentar logar!',"",2000);
     }
   }
 
